@@ -2,13 +2,18 @@
   <h2 class="text-center mb-4">
     TOP 10 Đội Bóng Dẫn Đầu Premier League 2025
   </h2>
-  <a class="text-center" href="/teams/create">Thêm đội bóng mới</a>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <a href="/teams/create" class="mb-2"> <h4>Thêm đội bóng mới</h4></a>
+    <a href="/teams/delete"><h5>Thùng rác ({{deletedCount}})</h5></a>
+  </div>
+  
   <table class="table">
     <thead>
         <tr>
         <th scope="col">Vị Trí</th>
         <th scope="col">Tên CLB</th>
         <th scope="col">Điểm</th>
+        <th scope="col"></th>
         <th scope="col"></th>
         </tr>
     </thead>
@@ -27,3 +32,52 @@
     </tbody>
     </table>
 </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="delete-team-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Xoá đội bóng
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              &times;
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Đội bóng bị xoá sẽ được chuyển tới thùng rác
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            HUỶ
+          </button>
+          <button id="btn-delete-team" type="button" class="btn btn-danger">
+            XOÁ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form method="POST" name="delete-team-form"></form>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', function () {
+        let teamId ;
+        $('#delete-team-modal').on('show.bs.modal', function (event) { 
+            let button = $(event.relatedTarget); 
+            teamId = button.data('id');
+
+            let btnDeleteTeam = document.getElementById('btn-delete-team');
+            let deleteForm = document.forms['delete-team-form'];
+            btnDeleteTeam.onclick = function() {
+                deleteForm.action = '/teams/' + teamId + '?_method=DELETE';
+                deleteForm.submit();
+            }
+        }) 
+    })
+</script>

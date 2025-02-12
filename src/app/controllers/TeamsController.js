@@ -22,13 +22,20 @@ class TeamsController {
 
   // [GET]/teams/rate
   rate(req, res, next) {
-    Team.find()
-    .then((teams) => {
+    Promise.all([Team.find(),Team.countDocumentsDeleted({ deletedAt: { $ne: null } })]).then(result => {
       res.render("teams/rating-teams", { 
-        teams: multipleMongooseToObject(teams).sort((a,b) => b.points - a.points)
+        teams: multipleMongooseToObject(result[0]).sort((a,b) => b.points - a.points),
+        deletedCount: result[1]
       });
-    })
-    .catch(next);
+    }).catch(next)
+
+    // Team.find()
+    // .then((teams) => {
+    //   res.render("teams/rating-teams", { 
+    //     teams: multipleMongooseToObject(teams).sort((a,b) => b.points - a.points)
+    //   });
+    // })
+    // .catch(next);
   }
 
   // [GET]/teams/create
@@ -49,6 +56,42 @@ class TeamsController {
     Team.findById(req.params.id)
       .then((team) => {
         res.render("teams/edit", { team: mongooseToObject(team) });
+      })
+      .catch(next);
+  }
+
+  // [DELETE]/teams/:id
+  delete(req, res, next) {
+    Team.delete({ _id: req.params.id })
+      .then(() => {
+        res.redirect("back");
+      })
+      .catch(next);
+  }
+
+  // [DELETE]/teams/:id/force
+  forceDelete(req, res, next) {
+    Team.deleteOne({ _id: req.params.id })
+      .then(() => {
+        res.redirect("back");
+      })
+      .catch(next);
+  }
+
+  // [PATCH]/teams/:id
+  restore(req, res, next) {
+    Team.restore({ _id: req.params.id })
+      .then(() => {
+        res.redirect("back");
+      })
+      .catch(next);
+  }
+
+  // [GET]/teams/delete
+  trash(req, res, next) {
+    Team.findDeleted({deletedAt:{$ne: null}})
+      .then((teams) => {
+        res.render("teams/trash", { teams: multipleMongooseToObject(teams) });
       })
       .catch(next);
   }

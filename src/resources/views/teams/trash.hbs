@@ -1,0 +1,56 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4">
+    Các Đội Bóng Đã Bị Xoá
+  </h2>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <a href="/teams/rating" class="mb-2"> <h4>Bảng Xếp Hạng</h4></a>
+  </div>
+  
+  <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">No</th>
+        <th scope="col">Tên CLB</th>
+        <th scope="col">Điểm</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each teams}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.points}}</td>
+                <td><a href="#" class="btn btn-link btn-restore" data-id="{{this._id}}">Khôi Phục</a></td>
+                <td><a href="#" class="btn btn-link btn-force-delete" data-id="{{this._id}}">Xoá Vĩnh Viễn</a></td>
+            </tr>
+        {{else}}
+        Không có đội bóng
+        {{/each}}
+    </tbody>
+    </table>
+</div>
+
+<form method="POST" name="restore-team-form"></form>
+<form method="POST" name="force-delete-team-form"></form>
+
+<script type="module">
+    document.addEventListener('DOMContentLoaded', function () {
+        let btnRestore = $('.btn-restore');
+        let btnForceDelete = $('.btn-force-delete');
+        let restoreForm = document.forms['restore-team-form'];
+        btnRestore.click(function(e) {
+            e.preventDefault();
+            restoreForm.action = '/teams/' + $(this).data('id') + '?_method=PATCH';
+            restoreForm.submit();
+        })
+
+        let forceDeleteForm = document.forms['force-delete-team-form'];
+        btnForceDelete.click(function(e) {
+            e.preventDefault();
+            forceDeleteForm.action = '/teams/' + $(this).data('id') + '/force?_method=DELETE';
+            forceDeleteForm.submit();
+        })
+    })
+</script>
