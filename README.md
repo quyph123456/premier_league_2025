@@ -23,6 +23,7 @@ A RESTful API for managing football teams participating in the 2025 Premier Leag
 4. import sample data from file src\public\json\premier_league_teams.json to mongodb
 5. npm run watch
 6. npm start
+-> API sẽ chạy tại http://localhost:3001
 
 ## Project Structure
 ```bash
