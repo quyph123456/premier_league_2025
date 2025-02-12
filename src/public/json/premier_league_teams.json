@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Manchester City",
+    "slug": "manchester-city",
+    "points": 89,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
+  },
+  {
+    "name": "Arsenal",
+    "slug": "arsenal",
+    "points": 84,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png"
+  },
+  {
+    "name": "Liverpool",
+    "slug": "liverpool",
+    "points": 82,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png"
+  },
+  {
+    "name": "Manchester United",
+    "slug": "manchester-united",
+    "points": 75,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
+  },
+  {
+    "name": "Newcastle United",
+    "slug": "newcastle-united",
+    "points": 71,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/1200px-Newcastle_United_Logo.svg.png"
+  },
+  {
+    "name": "Tottenham Hotspur",
+    "slug": "tottenham-hotspur",
+    "points": 70,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/1200px-Tottenham_Hotspur.svg.png"
+  },
+  {
+    "name": "Aston Villa",
+    "slug": "aston-villa",
+    "points": 68,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/1200px-Aston_Villa_FC_crest_%282016%29.svg.png"
+  },
+  {
+    "name": "Chelsea",
+    "slug": "chelsea",
+    "points": 65,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+  },
+  {
+    "name": "Brighton & Hove Albion",
+    "slug": "brighton-hove-albion",
+    "points": 62,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png"
+  },
+  {
+    "name": "West Ham United",
+    "slug": "west-ham-united",
+    "points": 60,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/1200px-West_Ham_United_FC_logo.svg.png"
+  },
+  {
+    "name": "Brentford",
+    "slug": "brentford",
+    "points": 59,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/1200px-Brentford_FC_crest.svg.png"
+  },
+  {
+    "name": "Crystal Palace",
+    "slug": "crystal-palace",
+    "points": 55,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Crystal_Palace_FC_logo.svg/1200px-Crystal_Palace_FC_logo.svg.png"
+  },
+  {
+    "name": "Everton",
+    "slug": "everton",
+    "points": 53,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/1200px-Everton_FC_logo.svg.png"
+  },
+  {
+    "name": "Nottingham Forest",
+    "slug": "nottingham-forest",
+    "points": 50,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/1200px-Nottingham_Forest_F.C._logo.svg.png"
+  },
+  {
+    "name": "Fulham",
+    "slug": "fulham",
+    "points": 49,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Fulham_FC_%28shield%29.svg/1200px-Fulham_FC_%28shield%29.svg.png"
+  },
+  {
+    "name": "Wolverhampton Wanderers",
+    "slug": "wolverhampton-wanderers",
+    "points": 48,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/1200px-Wolverhampton_Wanderers.svg.png"
+  },
+  {
+    "name": "AFC Bournemouth",
+    "slug": "afc-bournemouth",
+    "points": 46,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/1200px-AFC_Bournemouth_%282013%29.svg.png"
+  },
+  {
+    "name": "Burnley",
+    "slug": "burnley",
+    "points": 44,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Burnley_F.C._Logo.svg/1200px-Burnley_F.C._Logo.svg.png"
+  },
+  {
+    "name": "Luton Town",
+    "slug": "luton-town",
+    "points": 41,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Luton_Town_FC.svg/1200px-Luton_Town_FC.svg.png"
+  },
+  {
+    "name": "Sheffield United",
+    "slug": "sheffield-united",
+    "points": 38,
+    "matches_played": 38,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Sheffield_United_FC_logo.svg/1200px-Sheffield_United_FC_logo.svg.png"
+  }
+]
