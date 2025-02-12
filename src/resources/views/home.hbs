@@ -1,1 +1,24 @@
-HOME
+<div class="container py-5">
+  <h2 class="text-center mb-4">
+    Danh Sách Các Đội Bóng Premier League 2025
+  </h2>
+  <a class="text-center" href="/teams/rating">Bảng xếp hạng</a>
+  <div class="row g-4 ">
+    {{#each teams}}
+    <a href="/teams/{{this.slug}}">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="team-card text-center">
+            <div class="logo-container">
+                <img src="{{this.logo}}" alt="Image not found" class="team-logo" />
+            </div>
+            <div class="team-name">
+                {{this.name}}
+            </div>
+            </div>
+        </div>
+    </a>
+    {{else}}
+      no team
+    {{/each}}
+  </div>
+</div>

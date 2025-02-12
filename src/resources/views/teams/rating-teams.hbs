@@ -1,0 +1,29 @@
+<div class="container py-5">
+  <h2 class="text-center mb-4">
+    TOP 10 Đội Bóng Dẫn Đầu Premier League 2025
+  </h2>
+  <a class="text-center" href="/teams/rating">Bảng xếp hạng</a>
+  <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Vị Trí</th>
+        <th scope="col">Tên CLB</th>
+        <th scope="col">Điểm</th>
+        <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each teams}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.points}}</td>
+                <td><a href="/teams/{{this._id}}/edit" class="btn btn-link">Sửa</a></td>
+                <td><a href="" class="btn btn-link" data-toggle="modal" data-target="#delete-team-modal" data-id="{{this._id}}">Xoá</a></td>
+            </tr>
+        {{else}}
+        no team
+        {{/each}}
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.team-card {
+  margin-bottom: 1.5rem;
+  border: none;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.logo-container {
+  width: 200px;   /* Chiều rộng cố định */
+  height: 200px;  /* Chiều cao cố định */
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.team-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Giữ tỉ lệ ảnh */
+}
+
+.team-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.team-logo-detail {
+  width: 250px;
+  height: 250px;
+}
+
+
