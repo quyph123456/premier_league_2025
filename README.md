@@ -25,6 +25,7 @@ A RESTful API for managing football teams participating in the 2025 Premier Leag
 6. npm start
 
 ## Project Structure
+```bash
 premier_league_2025/
 │-- src/
 │   │-- app/
@@ -38,13 +39,13 @@ premier_league_2025/
 │   |   │-- scss/                   # Static styles
 │   |   │-- views/
 │           ├── layouts/            # Main Handlebars layouts
-            ├── partials/           # Handlebars layouts for header and footer of website
+|           ├── partials/           # Handlebars layouts for header and footer of website
 │           ├── teams/              # Team-related pages
 │   │-- routes/                     # API routes
 │   │-- index.js                    # Main Express application
 │-- package.json
 │-- README.md
-
+```
 
 
     
