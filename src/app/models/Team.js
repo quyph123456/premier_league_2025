@@ -7,7 +7,7 @@ const mongooseDelete = require('mongoose-delete');
 const Team = new Schema(
   {
     name: { type: String, required: true },
-    point: { type: Number },
+    points: { type: Number },
     logo: { type: String },
     matches_played: { type: Number },
     slug: { type: String, slug: "name", unique: true },

@@ -1,0 +1,38 @@
+<div class="m-5">
+  <h3>
+    Sửa thông tin đội bóng
+  </h3>
+  <form method="POST" action="/teams/{{team._id}}?_method=PUT">
+    <div class="form-group">
+      <label for="name">
+        Name
+      </label>
+      <input type="text" class="form-control" value="{{team.name}}" id="name" name="name" />
+    </div>
+
+    <div class="form-group">
+        <label for="points">
+            Số điểm
+        </label>
+        <input type="text" class="form-control" value="{{team.points}}" id="points" name="points" />
+    </div>
+
+    <div class="form-group">
+      <label for="matches_played">
+        Số trận đã đá
+      </label>
+      <input type="text" class="form-control" value="{{team.matches_played}}" id="matches_played" name="matches_played" />
+    </div>
+
+    <div class="form-group">
+      <label for="logo">
+        Logo
+      </label>
+      <input type="text" class="form-control" value="{{team.logo}}" id="logo" name="logo" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Lưu
+    </button>
+  </form>
+</div>

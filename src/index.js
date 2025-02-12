@@ -5,11 +5,13 @@ const handlebars = require("express-handlebars");
 const app = express();
 const PORT = 3001;
 const db = require("./config/db");
+const methodOverride = require("method-override");
 
 //Connect to db
 db.connect();
 const route = require("./routes");
 
+app.use(methodOverride("_method"));
 app.engine(
     "hbs",
     handlebars.engine({

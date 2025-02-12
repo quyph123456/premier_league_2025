@@ -1,0 +1,38 @@
+<div class="m-5">
+  <h3>
+    Tạo đội bóng mới
+  </h3>
+  <form method="POST" action="/teams/store">
+    <div class="form-group">
+      <label for="name">
+        Name
+      </label>
+      <input type="text" class="form-control" id="name" name="name" />
+    </div>
+
+    <div class="form-group">
+        <label for="points">
+            Số điểm
+        </label>
+        <input type="text" class="form-control" id="points" name="points" />
+    </div>
+
+    <div class="form-group">
+      <label for="matches_played">
+        Số trận đã đá
+      </label>
+      <input type="text" class="form-control" id="matches_played" name="matches_played" />
+    </div>
+
+    <div class="form-group">
+      <label for="logo">
+        Logo
+      </label>
+      <input type="text" class="form-control" id="logo" name="logo" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Tạo đội bóng
+    </button>
+  </form>
+</div>
