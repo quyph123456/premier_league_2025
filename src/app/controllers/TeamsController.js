@@ -22,7 +22,7 @@ class TeamsController {
 
   // [GET]/teams/rate
   rate(req, res, next) {
-    let sortedTeams = Team.find().sort({points: 'asc'})
+    let sortedTeams = Team.find().sort({points: 'desc'})
 
     Promise.all([sortedTeams,Team.countDocumentsDeleted({ deletedAt: { $ne: null } })]).then(result => {
       res.render("teams/rating-teams", { 
