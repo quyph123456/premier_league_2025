@@ -22,9 +22,11 @@ class TeamsController {
 
   // [GET]/teams/rate
   rate(req, res, next) {
-    Promise.all([Team.find(),Team.countDocumentsDeleted({ deletedAt: { $ne: null } })]).then(result => {
+    let sortedTeams = Team.find().sort({points: 'asc'})
+
+    Promise.all([sortedTeams,Team.countDocumentsDeleted({ deletedAt: { $ne: null } })]).then(result => {
       res.render("teams/rating-teams", { 
-        teams: multipleMongooseToObject(result[0]).sort((a,b) => b.points - a.points),
+        teams: multipleMongooseToObject(result[0]),
         deletedCount: result[1]
       });
     }).catch(next)
